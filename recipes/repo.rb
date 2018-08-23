@@ -42,7 +42,7 @@ when 'debian'
     uri          node['nginx']['upstream_repository']
     distribution node['lsb']['codename']
     components   %w(nginx)
-    deb_src      true
+    deb_src      node['nginx']['upstream_repistory']['source']
     key          node['nginx']['repo_signing_key']
   end
 
